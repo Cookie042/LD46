@@ -1,10 +1,13 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 [ExecuteAlways]
 public class UIFillBar : MonoBehaviour
 {
     private Image _maskImage;
+
+    public TMP_Text valueText;
 
     [Range(0,1)] public float value;
 
@@ -17,7 +20,7 @@ public class UIFillBar : MonoBehaviour
     {
         if (_maskImage)
         {
-            _maskImage.fillAmount = value;
+            SetValue(value * 100);
         }
     }
 
@@ -26,10 +29,12 @@ public class UIFillBar : MonoBehaviour
 
         if (_maskImage == null)
             return;
-        
         barValue = newValue;
 
         value = Mathf.InverseLerp(minValue, maxValue, newValue);
+
+        valueText.text = $"{newValue:G4}%";
+        
         _maskImage.fillAmount = value;
     }
     

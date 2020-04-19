@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using SaveBilly;
 using UnityEngine;
 using UnityEngine.AI;
+using NavMeshBuilder = UnityEditor.AI.NavMeshBuilder;
 
 public class BillyController : MonoBehaviour
 {
@@ -125,12 +126,12 @@ public class BillyController : MonoBehaviour
         if (food != null)
         {
             activelyEating.Add(food);
-            _agent.isStopped = true;
+            //_agent.isStopped = true;
             food.OnFinishedHandler += () =>
             {
                 activelyEating.Remove(food);
                 Destroy(food.gameObject);
-                _agent.isStopped = false;
+                //_agent.isStopped = false;
             };
 
         }
@@ -140,5 +141,11 @@ public class BillyController : MonoBehaviour
         var food = other.gameObject.GetComponentInParent<FoodBase>();
         if (food != null) activelyEating.Remove(food);
 
+    }
+
+    public void PlayHopSound()
+    {
+        var audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
     }
 }

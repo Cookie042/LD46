@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2075939574808579543}
   - component: {fileID: 8456946343439638771}
   - component: {fileID: 8899643086446763415}
+  - component: {fileID: 6268448768202652228}
   m_Layer: 0
   m_Name: Cushins03
   m_TagString: Untagged
@@ -128,6 +129,20 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.1
+--- !u!114 &6268448768202652228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212847920184581582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d4273679368844ea9df773e6112f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lifetime: 3
+  curve: {fileID: 11400000, guid: 12292297bfb0de747afc12f8444690b0, type: 2}
 --- !u!1 &1334129249786374556
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d4273679368844ea9df773e6112f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lifetime: 5
+  curve: {fileID: 11400000, guid: 12292297bfb0de747afc12f8444690b0, type: 2}
 --- !u!1 &1378456836545973549
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +347,7 @@ GameObject:
   - component: {fileID: 6078554424905563058}
   - component: {fileID: 641097597325452077}
   - component: {fileID: 5939495588555024904}
+  - component: {fileID: 206405791406115775}
   m_Layer: 0
   m_Name: Cushins02
   m_TagString: Untagged
@@ -444,6 +462,20 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.1
+--- !u!114 &206405791406115775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378456836545973549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d4273679368844ea9df773e6112f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lifetime: 3
+  curve: {fileID: 11400000, guid: 12292297bfb0de747afc12f8444690b0, type: 2}
 --- !u!1 &1577514071092188344
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +490,7 @@ GameObject:
   - component: {fileID: 6173521277168336994}
   - component: {fileID: 6640656719768549208}
   - component: {fileID: 5986363191517579795}
+  - component: {fileID: 8314526567688899801}
   m_Layer: 0
   m_Name: Cushins00
   m_TagString: Untagged
@@ -572,6 +605,20 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.003, z: 0.0050000004}
   m_TimeToStationary: 0.1
+--- !u!114 &8314526567688899801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577514071092188344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d4273679368844ea9df773e6112f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lifetime: 3
+  curve: {fileID: 11400000, guid: 12292297bfb0de747afc12f8444690b0, type: 2}
 --- !u!1 &1808903364901112095
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +632,7 @@ GameObject:
   - component: {fileID: 196993064495747834}
   - component: {fileID: 5454467689915047779}
   - component: {fileID: 8817205864188665860}
+  - component: {fileID: 2448514205286168275}
   m_Layer: 0
   m_Name: Cushins05
   m_TagString: Untagged
@@ -683,6 +731,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2448514205286168275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808903364901112095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d4273679368844ea9df773e6112f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lifetime: 3
+  curve: {fileID: 11400000, guid: 12292297bfb0de747afc12f8444690b0, type: 2}
 --- !u!1 &3907718035452676821
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +759,7 @@ GameObject:
   - component: {fileID: 1591675876892936951}
   - component: {fileID: 3426128578134397598}
   - component: {fileID: 5912856089373696689}
+  - component: {fileID: 8758770318649785839}
   m_Layer: 0
   m_Name: Cushins01
   m_TagString: Untagged
@@ -811,6 +874,20 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.002, z: 0.001}
   m_TimeToStationary: 0.1
+--- !u!114 &8758770318649785839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907718035452676821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d4273679368844ea9df773e6112f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lifetime: 3
+  curve: {fileID: 11400000, guid: 12292297bfb0de747afc12f8444690b0, type: 2}
 --- !u!1 &5267278972429455091
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +901,7 @@ GameObject:
   - component: {fileID: 4304869604665933070}
   - component: {fileID: 7861516581134160855}
   - component: {fileID: 6346854830673409843}
+  - component: {fileID: 82763637670129471}
   m_Layer: 0
   m_Name: Cushins04
   m_TagString: Untagged
@@ -922,3 +1000,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &82763637670129471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267278972429455091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d4273679368844ea9df773e6112f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lifetime: 3
+  curve: {fileID: 11400000, guid: 12292297bfb0de747afc12f8444690b0, type: 2}
