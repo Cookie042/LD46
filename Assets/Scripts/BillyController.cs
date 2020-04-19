@@ -111,6 +111,10 @@ public class BillyController : MonoBehaviour
             health -= Time.deltaTime * 10f;
         }
         sugar -= Time.deltaTime * foodConsumeRate * .25f;
+
+        sugar = Mathf.Clamp(sugar, 0, 100);
+        thirst = Mathf.Clamp(thirst, 0, 100);
+        hunger = Mathf.Clamp(hunger, 0, 100);
         
         healthBar.SetValue(health);
         sugarBar.SetValue(sugar);

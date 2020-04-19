@@ -9,12 +9,14 @@ public class MusicLoop : MonoBehaviour
     public AudioClip[] _clips;
     private double[] clipLengths;
 
-    private int toggle = 0;
+    public int toggle = 0;
 
-    private double nextStartTime;
+    public double nextStartTime;
     
     private void Start()
     {
+        
+        clipLengths = new double[_clips.Length]; 
         for (var i = 0; i < _clips.Length; i++)
         {
             var clip = _clips[i];
