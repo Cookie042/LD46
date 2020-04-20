@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class FoodSpawner : MonoBehaviour
 {
    public Vector3 spawnArea;
-
 
    //a value of one will be only goodFood;
    [Range(0, 1)] public float goodFoodBias = .5f;
@@ -20,11 +22,21 @@ public class FoodSpawner : MonoBehaviour
    public List<GameObject> badDrinks;
 
    public float spawnTimer;
+   [SerializeField]private float _bias;
+
+   public float badFoodRate = .01f;
+
+   private void Start()
+   {
+      Time.timeScale = 1;
+   }
 
    private void Update()
    {
       spawnTimer -= Time.deltaTime;
-
+      goodFoodBias -= badFoodRate * Time.deltaTime;
+      
+      
       if (spawnTimer < 0)
       {
          //spawn something and the time till the next one
@@ -37,10 +49,10 @@ public class FoodSpawner : MonoBehaviour
 
          var diff = billy.hunger - billy.thirst;
          var hungry = diff > 0;
+         
+         _bias = (diff / 100f + 1)/2 ;
 
-         var bias = Mathf.Abs(diff) / 100f;
-
-         var spawnFood = hungry ? rVal2 < bias : rVal2 > bias; 
+         var spawnFood = rVal2 < _bias; 
          
          GameObject newObject;
          if (isGood)
@@ -57,9 +69,16 @@ public class FoodSpawner : MonoBehaviour
          }
 
          var size = spawnArea / 2;
-         newObject.transform.position = transform.TransformPoint(new Vector3(
-            Random.Range(-size.x, size.x), 0,
-            Random.Range(-size.z, size.z))); 
+         bool pointValid = false;
+
+         Vector3 randomPoint = Vector3.zero;
+         while (!pointValid)
+         {
+            randomPoint = new Vector3(Random.Range(-size.x, size.x), 0, Random.Range(-size.z, size.z));
+            pointValid = NavMesh.SamplePosition(randomPoint, out var hit, .25f, NavMesh.AllAreas );
+            randomPoint = hit.position;
+         }
+         newObject.transform.position = randomPoint;
       }
    }
 

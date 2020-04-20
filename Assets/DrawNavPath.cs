@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class DrawNavPath : MonoBehaviour
@@ -26,14 +24,6 @@ public class DrawNavPath : MonoBehaviour
       {
          _lr.positionCount = cornerCount;
          _lr.SetPositions(pathPoints);
-      }
-   }
-
-   private void OnDrawGizmos()
-   {
-      if (Application.isPlaying)
-      {
-         Handles.Label(transform.position, $"{_agent.pathStatus}, {_agent.path.status}, {_agent.isPathStale}");
       }
    }
 }
